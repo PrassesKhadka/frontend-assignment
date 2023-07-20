@@ -4,7 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Search from "./pages/Search";
 import ProductDetails from "./pages/ProductDetails";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
+const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,13 +17,15 @@ const router = createBrowserRouter([
     element: <Search />,
   },
   {
-    path: "/ProductDetails",
+    path: "/ProductDetails/:id",
     element: <ProductDetails />,
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <QueryClientProvider client={queryClient}>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </QueryClientProvider>
+  // </React.StrictMode>
 );
