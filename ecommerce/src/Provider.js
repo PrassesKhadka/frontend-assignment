@@ -29,12 +29,14 @@ const Provider = () => {
   //Defining the main states of our program
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [search, setSearch] = useState("");
+
   return (
     <div>
       <QueryClientProvider client={queryClient}>
         {/* //Using ContextAPI to avoid prop drilling and make global states */}
         <ProductContext.Provider
-          value={{ products, setProducts, cart, setCart }}
+          value={{ products, setProducts, cart, setCart, search, setSearch }}
         >
           <RouterProvider router={router} />
         </ProductContext.Provider>

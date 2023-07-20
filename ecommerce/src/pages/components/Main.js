@@ -3,8 +3,11 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { ProductContext } from "../../Contexts/ProductContexts";
 import EachCard from "./EachCard";
+import Search from "../Search";
+
 const Main = ({ data }) => {
-  const { products, setProducts, cart, setCart } = useContext(ProductContext);
+  const { products, setProducts, cart, setCart, search, setSearch } =
+    useContext(ProductContext);
 
   useEffect(() => {
     setProducts(data);
@@ -14,9 +17,11 @@ const Main = ({ data }) => {
 
   return (
     <Wrapper>
-      {products.map((value) => (
-        <EachCard value={value} />
-      ))}
+      {search ? (
+        <Search />
+      ) : (
+        products.map((value) => <EachCard value={value} />)
+      )}
     </Wrapper>
   );
 };
