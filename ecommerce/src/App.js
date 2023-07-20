@@ -6,13 +6,8 @@ import Navbar from "./pages/components/Navbar";
 import Main from "./pages/components/Main";
 import Footer from "./pages/components/Footer";
 import Loader from "./Extra/Loader";
-import { ProductContext } from "./Contexts/ProductContexts";
 
 const App = () => {
-  //Defining the main states of our program
-  const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
-
   //Fetching data using tanstack React Query
   const { data, isLoading, isError } = useQuery({
     queryFn: async () => {
@@ -34,12 +29,11 @@ const App = () => {
   else main = <Main data={data} />;
 
   return (
-    //Using ContextAPI to avoid prop drilling and make global states
-    <ProductContext.Provider value={{ products, setProducts, cart, setCart }}>
+    <div>
       <Navbar />
       {main}
       <Footer />
-    </ProductContext.Provider>
+    </div>
   );
 };
 export default App;
