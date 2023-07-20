@@ -5,6 +5,7 @@ import axios from "axios";
 import Navbar from "./pages/components/Navbar";
 import Main from "./pages/components/Main";
 import Footer from "./pages/components/Footer";
+import Loader from "./Extra/Loader";
 import { ProductContext } from "./Contexts/ProductContexts";
 
 const App = () => {
@@ -20,10 +21,10 @@ const App = () => {
     },
   });
   //Using the states returned by react query
-  //useQuery returns an object consisting of data,isLoading,isError
+  //useQuery returns an object consisting of key: isLoading,isError
   //#Destructuring it(above)
   let main;
-  if (isLoading) main = <div>Loading...</div>;
+  if (isLoading) main = <Loader />;
   else if (isError) main = <div>Error fetching data</div>;
   else main = <Main data={data} />;
 
