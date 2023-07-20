@@ -6,7 +6,7 @@ import ProductDetails from "../ProductDetails";
 const EachCard = ({ value }) => {
   return (
     <Wrapper>
-      <CustomLink to={`/ProductDetails/:${value.id}`}>
+      <CustomLink to={`/ProductDetails/${value.id}`}>
         <Image src={value.image}></Image>
       </CustomLink>
       <Title>{value.title}</Title>

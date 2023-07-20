@@ -24,7 +24,12 @@ const App = () => {
   //useQuery returns an object consisting of key: isLoading,isError
   //#Destructuring it(above)
   let main;
-  if (isLoading) main = <Loader />;
+  if (isLoading)
+    main = (
+      <div>
+        <Loader />
+      </div>
+    );
   else if (isError) main = <div>Error fetching data</div>;
   else main = <Main data={data} />;
 

@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Search from "./pages/Search";
 import ProductDetails from "./pages/ProductDetails";
+import ErrorPage from "./pages/ErrorPage";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/search",
@@ -22,10 +24,9 @@ const router = createBrowserRouter([
   },
 ]);
 
+//Defining the main states of our program
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <React.StrictMode>
   <QueryClientProvider client={queryClient}>
     <RouterProvider router={router} />
   </QueryClientProvider>
-  // </React.StrictMode>
 );
