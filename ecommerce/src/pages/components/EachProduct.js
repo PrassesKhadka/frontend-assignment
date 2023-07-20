@@ -24,7 +24,7 @@ const EachProduct = ({ id }) => {
         </div>
         <div>
           <Title>{title}</Title>
-          <Price>{price}</Price>
+          <Price>{`${price}$`}</Price>
           <Category>{category}</Category>
           <Rating>{rating}</Rating>
         </div>
@@ -37,25 +37,33 @@ const EachProduct = ({ id }) => {
 };
 
 const Wrapper = styled.div`
-  display:grid;
-  grid-template-rows:repeat(2,1fr)
-  grid-template-columns:repeat(2,1fr)
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  justify-content: center;
 `;
 const InnerWrapper = styled.div`
-  display: flex;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
 `;
 const Image = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 25%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
 `;
 const Title = styled.h2`
-  display: flex;
+  font-size: 24px;
+  margin-bottom: 10px;
 `;
 const Price = styled.h3`
   display: flex;
 `;
 const Description = styled.p`
-  display: flex;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
 `;
 const Rating = styled.p`
   display: flex;
