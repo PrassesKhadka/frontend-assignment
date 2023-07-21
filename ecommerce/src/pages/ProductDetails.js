@@ -11,7 +11,9 @@ const ProductDetails = () => {
   return (
     <div>
       <Navbar />
-      <EachProduct id={id} />
+      <div className="max-w-7xl mx-auto p-8">
+        <EachProduct id={id} />
+      </div>
       <Footer />
     </div>
   );

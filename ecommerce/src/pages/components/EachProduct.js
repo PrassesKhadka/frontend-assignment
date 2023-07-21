@@ -10,65 +10,103 @@ const EachProduct = ({ id }) => {
 
   const data = products.find((obj) => obj.id == id);
   const image = data.image;
-  const title = data.title;
+  const title = data.title.toUpperCase;
   const price = data.price;
   const description = data.description;
   const rating = data.rating["rate"];
-  const category = data.category;
+  const category = data.category.toUpperCase();
 
   return (
     <Wrapper>
       <InnerWrapper>
-        <div>
+        <Gallery>
           <Image src={image}></Image>
-        </div>
-        <div>
+        </Gallery>
+        <Details>
           <Title>{title}</Title>
           <Price>{`${price}$`}</Price>
           <Category>{category}</Category>
-          <Rating>{rating}</Rating>
-        </div>
-        <div>
           <Description>{description}</Description>
-        </div>
+          <Rating>{rating}</Rating>
+          <Button>Add to cart</Button>
+        </Details>
       </InnerWrapper>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  width: 100%;
+  min-height: 100vh;
+  background: whitesmoke;
+  display: flex;
+  align-items: center;
   justify-content: center;
 `;
 const InnerWrapper = styled.div`
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
-`;
-const Image = styled.img`
-  width: 25%;
-  max-height: 200px;
-  object-fit: cover;
-  margin-bottom: 10px;
-`;
-const Title = styled.h2`
-  font-size: 24px;
-  margin-bottom: 10px;
-`;
-const Price = styled.h3`
+  width: 90%;
+  max-width: 750px;
   display: flex;
 `;
+const Gallery = styled.div`
+  flex-basis: 47%;
+  //background: #241e20;
+  background: white;
+  transform: scale(1.05);
+  box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+`;
+const Image = styled.img`
+  width: 100%;
+  display: block;
+  padding-top: 100px;
+`;
+const Details = styled.div`
+  flex-basis: 53%;
+  background: #fff;
+
+  padding: 30px;
+  box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+  font-weight: 500;
+  color: black;
+`;
+
+const Title = styled.h1`
+  color: black;
+  font-size: 35px;
+`;
+const Price = styled.h2`
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+`;
+const Category = styled.h3`
+  color: #00d874;
+  margin-bottom: 10px;
+`;
 const Description = styled.p`
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 10px;
 `;
 const Rating = styled.p`
   display: flex;
 `;
-const Category = styled.h4`
-  display: flex;
+const Button = styled.button`
+  background: #553ffa;
+  color: #fff;
+  font-size: 17px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  border: 0;
+  outline: 0;
+  margin-top: 20px;
+  box-shadow: 0 10px 10px rgba(85, 63, 240, 0.25);
+  cursor: pointer;
 `;
+
 export default EachProduct;
