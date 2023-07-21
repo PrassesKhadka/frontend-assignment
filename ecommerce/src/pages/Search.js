@@ -2,6 +2,7 @@ import React from "react";
 import { ProductContext } from "../Contexts/ProductContexts";
 import { useContext } from "react";
 import EachCard from "./components/EachCard";
+import styled from "styled-components";
 
 const Search = () => {
   const { products, search } = useContext(ProductContext);
@@ -14,14 +15,16 @@ const Search = () => {
   });
 
   return (
-    <div>
-      <div>
-        {filteredProducts.map((value) => (
-          <EachCard key={value.id} value={value} />
-        ))}
-      </div>
-    </div>
+    <Wrapper>
+      {filteredProducts.map((value) => (
+        <EachCard key={value.id} value={value} />
+      ))}
+    </Wrapper>
   );
 };
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
 export default Search;

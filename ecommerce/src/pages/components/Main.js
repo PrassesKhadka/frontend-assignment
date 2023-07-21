@@ -6,8 +6,7 @@ import EachCard from "./EachCard";
 import Search from "../Search";
 
 const Main = ({ data }) => {
-  const { products, setProducts, cart, setCart, search, setSearch } =
-    useContext(ProductContext);
+  const { products, setProducts, search } = useContext(ProductContext);
 
   useEffect(() => {
     setProducts(data);

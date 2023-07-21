@@ -43,8 +43,6 @@ const Image = styled.img`
 const Info = styled.div`
   margin-top: auto;
 `;
-const Title = styled.h5`
-  text-decoration: none;
-`;
+const Title = styled.h5``;
 const Price = styled.h6``;
 export default EachCard;

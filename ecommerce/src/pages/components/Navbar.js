@@ -9,6 +9,7 @@ const Navbar = () => {
   console.log(search);
   return (
     <div>
+      <Nav></Nav>
       <CustomLink to="/">
         <Nav>Home</Nav>
       </CustomLink>
