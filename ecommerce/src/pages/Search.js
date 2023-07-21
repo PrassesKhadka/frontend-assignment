@@ -2,6 +2,7 @@ import React from "react";
 import { ProductContext } from "../Contexts/ProductContexts";
 import { useContext } from "react";
 import EachCard from "./components/EachCard";
+import EmptySearch from "./components/EmptySearch";
 import styled from "styled-components";
 
 const Search = () => {
@@ -16,9 +17,13 @@ const Search = () => {
 
   return (
     <Wrapper>
-      {filteredProducts.map((value) => (
-        <EachCard key={value.id} value={value} />
-      ))}
+      {filteredProducts[0] ? (
+        filteredProducts.map((value) => (
+          <EachCard key={value.id} value={value} />
+        ))
+      ) : (
+        <EmptySearch />
+      )}
     </Wrapper>
   );
 };

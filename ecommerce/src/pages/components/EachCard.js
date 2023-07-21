@@ -2,8 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import ProductDetails from "../ProductDetails";
+import { ProductContext } from "../../Contexts/ProductContexts";
+import { useContext } from "react";
+import { useState } from "react";
 
 const EachCard = ({ value }) => {
+  const { products, cart, setCart } = useContext(ProductContext);
+
   return (
     <Wrapper>
       <CustomLink to={`/ProductDetails/${value.id}`}>
@@ -45,4 +50,5 @@ const Info = styled.div`
 `;
 const Title = styled.h5``;
 const Price = styled.h6``;
+
 export default EachCard;

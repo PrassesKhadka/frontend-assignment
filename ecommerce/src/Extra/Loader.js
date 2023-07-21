@@ -20,7 +20,7 @@ const Spinner = styled.div`
 const HalfSpinner = styled.div`
   width: 150px;
   height: 150px;
-  border: 3px solid #03fc4e;
+  border: 3px solid black;
   border-top: 3px solid transparent;
   border-radius: 50%;
   animation: spin 0.5s linear 0s infinite;

@@ -8,35 +8,67 @@ const Navbar = () => {
   const { products, search, setSearch } = useContext(ProductContext);
   console.log(search);
   return (
-    <div>
-      <Nav></Nav>
-      <CustomLink to="/">
-        <Nav>Home</Nav>
-      </CustomLink>
-      <div>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
-        >
-          <label for="search">Search for any item</label>
-          <input
-            type="text"
-            placeholder="Shop it"
-            onChange={(e) => {
-              setSearch(e.target.value);
+    <Wrapper>
+      <Nav>
+        <CustomLink to="/">
+          <Logo>OnlineStore</Logo>
+          Home
+        </CustomLink>
+        <div>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
             }}
-          ></input>
-        </form>
-      </div>
-    </div>
+          >
+            <Input
+              type="text"
+              placeholder="Search here"
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
+            ></Input>
+          </form>
+        </div>
+      </Nav>
+    </Wrapper>
   );
 };
 
-const CustomLink = styled(Link)`
-  text-decoration: none;
+const Wrapper = styled.div`
+  margin-bottom: 25px;
 `;
-const Nav = styled.h1`
+const Logo = styled.div`
   text-decoration: none;
+  font-size: 22px;
+  font-weight: 500;
+`;
+const Nav = styled.nav`
+  position: sticky;
+  top: 0;
+  left: 0;
+  max-width: 100vw;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  list-style: none;
+`;
+const Input = styled.input`
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 0 15px 0 45px;
+`;
+const CustomLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  column-gap: 20px;
+  list-style: none;
 `;
 export default Navbar;

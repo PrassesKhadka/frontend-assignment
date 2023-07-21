@@ -6,6 +6,8 @@ import Navbar from "./pages/components/Navbar";
 import Main from "./pages/components/Main";
 import Footer from "./pages/components/Footer";
 import Loader from "./Extra/Loader";
+import styles from "./App.css";
+import styled from "styled-components";
 
 const App = () => {
   //Fetching data using tanstack React Query
@@ -15,6 +17,7 @@ const App = () => {
       return data;
     },
   });
+
   //Using the states returned by react query
   //useQuery returns an object consisting of key: isLoading,isError
   //#Destructuring it(above)
@@ -29,11 +32,19 @@ const App = () => {
   else main = <Main data={data} />;
 
   return (
-    <div>
+    <Wrapper>
       <Navbar />
       {main}
       <Footer />
-    </div>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  @media screen and (min-width: 426px) {
+    postion: absolute;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+`;
 export default App;

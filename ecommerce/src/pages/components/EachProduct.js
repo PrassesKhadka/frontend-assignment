@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { useContext } from "react";
 import { ProductContext } from "../../Contexts/ProductContexts";
 import ProductDetails from "../ProductDetails";
-import ErrorPage from "../ErrorPage";
 
 const EachProduct = ({ id }) => {
   const { products } = useContext(ProductContext);
@@ -49,17 +48,22 @@ const InnerWrapper = styled.div`
   display: flex;
 `;
 const Gallery = styled.div`
-  flex-basis: 47%;
+  flex-basis: 30%;
   //background: #241e20;
   background: white;
-  transform: scale(1.05);
+  &:hover {
+    transform: scale(1.05);
+  }
   box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const Image = styled.img`
-  width: 100%;
+  width: 80%;
   display: block;
-  padding-top: 100px;
+  padding-top: 60%;
 `;
 const Details = styled.div`
   flex-basis: 53%;
