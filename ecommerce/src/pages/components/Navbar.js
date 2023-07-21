@@ -21,6 +21,7 @@ const Navbar = () => {
           <label for="search">Search for any item</label>
           <input
             type="text"
+            placeholder="Shop it"
             onChange={(e) => {
               setSearch(e.target.value);
             }}
