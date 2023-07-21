@@ -10,7 +10,7 @@ const EachProduct = ({ id }) => {
 
   const data = products.find((obj) => obj.id == id);
   const image = data.image;
-  const title = data.title.toUpperCase;
+  const title = data.title.toUpperCase();
   const price = data.price;
   const description = data.description;
   const rating = data.rating["rate"];

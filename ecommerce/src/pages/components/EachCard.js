@@ -9,29 +9,42 @@ const EachCard = ({ value }) => {
       <CustomLink to={`/ProductDetails/${value.id}`}>
         <Image src={value.image}></Image>
       </CustomLink>
-      <Title>{value.title}</Title>
-      <Price>{`${value.price}$`}</Price>
+      <Info>
+        <Title>{value.title}</Title>
+        <Price>{`${value.price}$`}</Price>
+      </Info>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f7f7f7;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  padding: 2%;
+  flex-grow: 1;
+  flex-basis: 16%;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction:column;
+  @media (max-width: 920px) {
+    flex: 1 21%;
+  }
+
+  @media (max-width: 600px) {
+    .product-card 
+      flex: 1 46%;
+    
+  }
 `;
 
 const CustomLink = styled(Link)``;
 const Image = styled.img`
-  width: 100px;
-  height: 100px;
-  display: block;
+  max-width: 100%;
 `;
-const Title = styled.h2`
+const Info = styled.div`
+  margin-top: auto;
+`;
+const Title = styled.h5`
   text-decoration: none;
 `;
-const Price = styled.p``;
+const Price = styled.h6``;
 export default EachCard;
