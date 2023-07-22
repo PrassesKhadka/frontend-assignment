@@ -1,5 +1,6 @@
 # E-commerce Development Project
 
+[Live Demo](https://64bb900875db483cd9ed5e2b--gleeful-salamander-1bc9ef.netlify.app/)
 - This project is bootstrapped using create-react-app
 
 To run this project locally
