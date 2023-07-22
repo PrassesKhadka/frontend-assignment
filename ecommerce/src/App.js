@@ -1,12 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Navbar from "./pages/components/Navbar";
 import Main from "./pages/components/Main";
 import Footer from "./pages/components/Footer";
 import Loader from "./Extra/Loader";
-import styles from "./App.css";
+import style from "./App.css";
 import styled from "styled-components";
 
 const App = () => {
