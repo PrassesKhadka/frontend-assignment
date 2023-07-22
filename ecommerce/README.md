@@ -2,13 +2,14 @@
 
 - This project is bootstrapped using create-react-app
 
-# To run this project locally
+To run this project locally
 
-````git clone https://github.com/PrassesKhadka/frontend-assignment.git
- cd ecommerce
- npm install
- npm run start ```
-
+```
+git clone https://github.com/PrassesKhadka/frontend-assignment.git
+cd ecommerce
+npm install
+npm run start
+```
 
 - This project is built for [internsathi](https://internsathi.com/) react internship assignment.
 
@@ -31,11 +32,3 @@
 - Implemented client-side routing using react-router-dom
 - Material UI
 - Git for version control
-
-# Lessons Learnt
-
-````
-
-```
-
-```
