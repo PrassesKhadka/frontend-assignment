@@ -1,5 +1,5 @@
 # Assignment Title: E-commerce Development Task
-
+[Live Demo](https://64bb900875db483cd9ed5e2b--gleeful-salamander-1bc9ef.netlify.app/)
 ## Assignment Description:
 
 In this assignment, you will create a basic e-commerce application using Next.js / React.js. You'll apply key React/Next concepts and fundamental web development skills. Your task is to develop a multi-page web application named "OnlineStore" that allows users to browse and search for products.
