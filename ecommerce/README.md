@@ -2,13 +2,15 @@
 
 - This project is bootstrapped using create-react-app
 
+# To run this project locally
+
 ````git clone https://github.com/PrassesKhadka/frontend-assignment.git
  cd ecommerce
  npm install
  npm run start ```
-- This project is built for [internsathi](https://internsathi.com/) react internship assignment.
 
-````
+
+- This project is built for [internsathi](https://internsathi.com/) react internship assignment.
 
 # Features
 
@@ -31,6 +33,8 @@
 - Git for version control
 
 # Lessons Learnt
+
+````
 
 ```
 
