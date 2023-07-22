@@ -6,7 +6,6 @@ import ProductDetails from "../ProductDetails";
 
 const EachProduct = ({ id }) => {
   const { products } = useContext(ProductContext);
-
   const data = products.find((obj) => obj.id == id);
   const image = data.image;
   const title = data.title.toUpperCase();

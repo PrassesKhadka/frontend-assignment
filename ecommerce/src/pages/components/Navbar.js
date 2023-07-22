@@ -34,9 +34,7 @@ const Navbar = () => {
   );
 };
 
-const Wrapper = styled.div`
-  margin-bottom: 25px;
-`;
+const Wrapper = styled.div``;
 const Logo = styled.div`
   text-decoration: none;
   font-size: 22px;
@@ -47,11 +45,12 @@ const Nav = styled.nav`
   top: 0;
   left: 0;
   max-width: 100vw;
-  background: white;
+  background: #fffcf2;
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 20px;
+  padding: 15px;
   list-style: none;
 `;
 const Input = styled.input`
@@ -61,7 +60,7 @@ const Input = styled.input`
   outline: none;
   border-radius: 6px;
   background-color: #fff;
-  padding: 0 15px 0 45px;
+  padding: 5px 15px 5px 45px;
 `;
 const CustomLink = styled(Link)`
   display: flex;
