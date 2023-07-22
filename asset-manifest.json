@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/PrassesKhadka/frontend-assignment/ecommerce/static/css/main.d453fd11.css",
-    "main.js": "/PrassesKhadka/frontend-assignment/ecommerce/static/js/main.391f45a9.js",
-    "index.html": "/PrassesKhadka/frontend-assignment/ecommerce/index.html",
-    "main.d453fd11.css.map": "/PrassesKhadka/frontend-assignment/ecommerce/static/css/main.d453fd11.css.map",
-    "main.391f45a9.js.map": "/PrassesKhadka/frontend-assignment/ecommerce/static/js/main.391f45a9.js.map"
+    "main.css": "/frontend-assignment/ecommerce/static/css/main.d453fd11.css",
+    "main.js": "/frontend-assignment/ecommerce/static/js/main.a0dc458e.js",
+    "index.html": "/frontend-assignment/ecommerce/index.html",
+    "main.d453fd11.css.map": "/frontend-assignment/ecommerce/static/css/main.d453fd11.css.map",
+    "main.a0dc458e.js.map": "/frontend-assignment/ecommerce/static/js/main.a0dc458e.js.map"
   },
   "entrypoints": [
     "static/css/main.d453fd11.css",
-    "static/js/main.391f45a9.js"
+    "static/js/main.a0dc458e.js"
   ]
 }
