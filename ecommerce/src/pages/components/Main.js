@@ -29,10 +29,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   min-height: 90vh;
-  @media screen and (min-width: 426px) {
-    postion: absolute;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
+  margin: 2%;
 `;
 export default Main;

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ProductContext } from "../../Contexts/ProductContexts";
 import { useContext } from "react";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Navbar = () => {
   const { products, search, setSearch } = useContext(ProductContext);
@@ -14,12 +15,12 @@ const Navbar = () => {
           <Logo>OnlineStore</Logo>
           Home
         </CustomLink>
-        <div>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-            }}
-          >
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+        >
+          <Search>
             <Input
               type="text"
               placeholder="Search here"
@@ -27,18 +28,26 @@ const Navbar = () => {
                 setSearch(e.target.value);
               }}
             ></Input>
-          </form>
-        </div>
+          </Search>
+        </form>
       </Nav>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div``;
-const Logo = styled.div`
+const Logo = styled.h1`
   text-decoration: none;
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 35px;
+  font-weight: 100;
+  @media screen and (min-width: 1024px) {
+    margin-right: 150px;
+  }
+`;
+const Search = styled.div`
+  width: 100%;
+  position: relative;
+  display: flex;
 `;
 const Nav = styled.nav`
   position: sticky;
@@ -56,11 +65,15 @@ const Nav = styled.nav`
 const Input = styled.input`
   height: 100%;
   width: 100%;
-  border: none;
-  outline: none;
-  border-radius: 6px;
+  border: 1px solid black;
   background-color: #fff;
-  padding: 5px 15px 5px 45px;
+  padding: 8px;
+  border-radius: 15px;
+  outline: none;
+  color: #9dbfaf;
+  &:focus {
+    border: 1px solid blue;
+  }
 `;
 const CustomLink = styled(Link)`
   display: flex;

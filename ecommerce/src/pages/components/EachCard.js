@@ -43,12 +43,17 @@ const Wrapper = styled.div`
 
 const CustomLink = styled(Link)``;
 const Image = styled.img`
-  max-width: 100%;
+  max-width: 40%;
 `;
 const Info = styled.div`
   margin-top: auto;
 `;
-const Title = styled.h5``;
-const Price = styled.h6``;
+const Title = styled.h5`
+  color: black;
+`;
+const Price = styled.h6`
+  margin-top: 5px;
+  color: red;
+`;
 
 export default EachCard;

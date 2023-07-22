@@ -31,5 +31,7 @@ const Search = () => {
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 `;
 export default Search;

@@ -1,7 +1,7 @@
 # E-commerce Development Project
 
-This project is bootstrapped using create-react-app
-This project is built for [internsathi](https://internsathi.com/) react internship assignment.
+`This project is bootstrapped using create-react-app`
+` This project is built for [internsathi](https://internsathi.com/) react internship assignment.`
 
 # Features
 
@@ -9,6 +9,7 @@ This project is built for [internsathi](https://internsathi.com/) react internsh
 - You can search for your desired product
 - Loading appears when data is being fetched
 - Error appears when data cannot be fetched
+- Mobile Responsive
 
 # Built with
 
@@ -19,6 +20,7 @@ This project is built for [internsathi](https://internsathi.com/) react internsh
 - React styled-components for styling
 - Context API for global state management
 - Implemented client-side routing using react-router-dom
+- Material UI
 - Git for version control
 
 # Lessons Learnt

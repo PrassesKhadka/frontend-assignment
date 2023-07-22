@@ -10,7 +10,7 @@ const EachProduct = ({ id }) => {
   const image = data.image;
   const title = data.title.toUpperCase();
   const price = data.price;
-  const description = data.description;
+  const description = data.description.toUpperCase();
   const rating = data.rating["rate"];
   const category = data.category.toUpperCase();
 
@@ -25,7 +25,7 @@ const EachProduct = ({ id }) => {
           <Price>{`${price}$`}</Price>
           <Category>{category}</Category>
           <Description>{description}</Description>
-          <Rating>{rating}</Rating>
+          <Rating>{`Rating: ${rating}`}</Rating>
           <Button>Add to cart</Button>
         </Details>
       </InnerWrapper>
@@ -43,8 +43,10 @@ const Wrapper = styled.div`
 `;
 const InnerWrapper = styled.div`
   width: 90%;
-  max-width: 750px;
+  max-width: 1000px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const Gallery = styled.div`
   flex-basis: 30%;
@@ -80,14 +82,15 @@ const Title = styled.h1`
   font-size: 35px;
 `;
 const Price = styled.h2`
-  color: black;
+  color: red;
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: #00d874;
 `;
 const Category = styled.h3`
-  color: #00d874;
   margin-bottom: 10px;
+  color: blue;
 `;
 const Description = styled.p`
   font-size: 15px;
@@ -97,6 +100,7 @@ const Description = styled.p`
 `;
 const Rating = styled.p`
   display: flex;
+  color: red;
 `;
 const Button = styled.button`
   background: #553ffa;
